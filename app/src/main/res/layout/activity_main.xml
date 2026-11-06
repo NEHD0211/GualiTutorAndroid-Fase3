@@ -1,0 +1,158 @@
+<ScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/main"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fillViewport="true">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guali Tutor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="12dp"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLecciones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lecciones"/>
+
+            <Button
+                android:id="@+id/btnConfiguracion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Configuración"/>
+
+            <Button
+                android:id="@+id/btnHistorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historial"/>
+
+            <Button
+                android:id="@+id/btnAyuda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ayuda"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LECCIÓN ACTIVA"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/txtTituloLeccion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ninguna lección seleccionada"
+        android:textSize="18sp"
+        android:layout_marginBottom="12dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Panel de lección activa"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/imgLeccion"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src="@android:drawable/ic_menu_gallery"
+        android:contentDescription="Imagen de la lección"/>
+
+    <TextView
+        android:id="@+id/txtDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aquí se mostrará el contenido de la lección."
+        android:padding="12dp"
+        android:minHeight="80dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editor de código Java"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
+
+    <EditText
+        android:id="@+id/editorCodigo"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:gravity="top"
+        android:inputType="textMultiLine"
+        android:fontFamily="monospace"
+        android:textSize="14sp"
+        android:hint="Escriba su código Java aquí"
+        android:padding="8dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btnCompilar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Compilar"/>
+
+        <Button
+            android:id="@+id/btnEjecutar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ejecutar"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Panel de consola"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/txtConsola"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="100dp"
+        android:background="#EEEEEE"
+        android:textColor="#222222"
+        android:padding="12dp"
+        android:text="La salida del programa aparecerá aquí."
+        android:fontFamily="monospace"/>
+
+</LinearLayout>
+</ScrollView>
